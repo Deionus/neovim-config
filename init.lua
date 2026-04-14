@@ -20,9 +20,12 @@ vim.lsp.config("roslyn", {
     },
 })
 
+vim.opt.termguicolors = true
+
 vim.cmd[[colorscheme tokyonight]]
 
 vim.wo.number = true
+vim.wo.relativenumber = true
 
 vim.opt.expandtab = true
 vim.opt.shiftwidth = 2
