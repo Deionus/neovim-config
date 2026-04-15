@@ -1,7 +1,12 @@
+-- Add vim config
 require("config.options")
 require("config.autocmds")
+
+-- Bootstrap lazy.nvim
 require("config.lazy")
 
+-- lsp config
+-- should probably live somewhere else, idk where
 vim.lsp.config("roslyn", {
     on_attach = function()
         print("Roslyn Attached!")
@@ -16,6 +21,4 @@ vim.lsp.config("roslyn", {
         },
     },
 })
-
-vim.cmd[[colorscheme tokyonight]]
 
