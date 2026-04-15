@@ -1,9 +1,6 @@
+require("config.options")
+require("config.autocmds")
 require("config.lazy")
-
-vim.api.nvim_create_autocmd('FileType', {
-  pattern = { 'cs' },
-  callback = function() vim.treesitter.start() end,
-})
 
 vim.lsp.config("roslyn", {
     on_attach = function()
@@ -20,14 +17,5 @@ vim.lsp.config("roslyn", {
     },
 })
 
-vim.opt.termguicolors = true
-
 vim.cmd[[colorscheme tokyonight]]
 
-vim.wo.number = true
-vim.wo.relativenumber = true
-
-vim.opt.expandtab = true
-vim.opt.shiftwidth = 2
-vim.opt.tabstop = 2
-vim.opt.softtabstop = 2
